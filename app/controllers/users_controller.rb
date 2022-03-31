@@ -38,4 +38,15 @@ class UsersController < ApplicationController
     end
     render plain: response_text
   end
+
+  def login
+    email = params[:email]
+    password = params[:password]
+    user = User.where("email = ? and password = ?", email, password).first
+    response_text = false
+    if user
+      response_text = true
+    end
+    render plain: response_text
+  end
 end
