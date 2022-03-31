@@ -24,4 +24,18 @@ class UsersController < ApplicationController
     response_text = "Hey, new user is created with the id #{new_user.id}"
     render plain: response_text
   end
+
+  def update
+    id = params[:id]
+    new_password = params[:new_password]
+    old_password = params[:old_password]
+    user = User.where("id = ? and password = ?", id, old_password).first
+    response_text = "No such user"
+    if user
+      user.password = new_password
+      user.save!
+      response_text = "Password has been changed for #{user.to_pleasant_string}"
+    end
+    render plain: response_text
+  end
 end
