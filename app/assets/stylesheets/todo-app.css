@@ -37,6 +37,12 @@ body {
   color: #453c52;
 }
 
+.TodoItem-dueDate {
+  font-size: 10;
+  color: #342b41;
+  margin-left: 10px;
+}
+
 .TodoItem-container {
   display: flex;
   padding: 2px 8px;
@@ -49,13 +55,6 @@ body {
 .TodoItem-checkbox {
   width: 16px;
   height: 16px;
-}
-
-.TodoItem-overdueLabel {
-  margin-left: 10px;
-  color: #c53030;
-  font-size: 12px;
-  display: inline;
 }
 
 .TodoItem-delete {
