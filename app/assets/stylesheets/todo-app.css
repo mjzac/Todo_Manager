@@ -36,7 +36,9 @@ body {
   margin-bottom: 6px;
   color: #453c52;
 }
-
+.TodoItem-complete {
+  text-decoration: line-through;
+}
 .TodoItem-dueDate {
   font-size: 10;
   color: #342b41;
