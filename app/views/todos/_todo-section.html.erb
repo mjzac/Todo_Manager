@@ -7,8 +7,7 @@
         <% todos.each do |todo| %>
           <li class="TodoItem">
             <div class="TodoItem-container">
-            <%= form_with(url: "todos/#{todo.id}/", method: "PUT") do %>
-              <form method="PUT" action='/todos/<%= todo.id %>'>
+            <%= form_with(url: "/todos/#{todo.id}/", method: "put") do %>
               <input class="TodoItem-checkbox"
                 name="completed"
                 type="checkbox"
