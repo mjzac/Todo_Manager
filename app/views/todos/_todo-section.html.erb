@@ -8,7 +8,7 @@
           <li class="TodoItem">
             <div class="TodoItem-container">
             <%= form_with(url: "/todos/#{todo.id}/", method: "put") do %>
-            <%= check_box_tag "completed", nil, todo.completed %>
+            <%= check_box_tag "completed", nil, todo.completed, onclick: "this.form.submit()" %>
             <% end %>
 
               <p class='<%= todo.completed ? "TodoItem-complete" : "" %>'>
