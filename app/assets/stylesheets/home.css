@@ -10,7 +10,9 @@
 
 .UserHeader {
   padding: 10px;
-  background-color: lavender;
+  background-color: gainsboro;
   font-size: 14px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 }

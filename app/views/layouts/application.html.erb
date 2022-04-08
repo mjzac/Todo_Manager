@@ -10,9 +10,10 @@
   </head>
   <body>
     <% if @current_user %>
-      <p class="UserHeader">
+      <div class="UserHeader">
         Welcome <%= @current_user.first_name%>
-      </p>
+        <%= button_to "Signout", destroy_session_path, method: "delete" %>
+      </div>
     <% end %>
     <%= yield %>
   </body>
