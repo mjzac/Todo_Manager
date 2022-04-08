@@ -1,6 +1,6 @@
 # users_controller.rb
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  skip_before_action :ensure_user_logged_in
 
   def index
     render plain: User.order(:first_name).map { |user| user.to_pleasant_string }.join("\n")
